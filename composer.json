@@ -1,0 +1,16 @@
+{
+    "name": "jod35/php_mvc",
+    "autoload": {
+        "psr-4": {
+            "Jod35\\PhpMvc\\": "src/",
+            "app\\":"./"
+        }
+    },
+    "authors": [
+        {
+            "name": "jod35",
+            "email": "jodestrevin@gmail.com"
+        }
+    ],
+    "require": {}
+}
