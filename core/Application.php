@@ -1,20 +1,27 @@
 <?php
+
 namespace app\core;
 
-use app\core\Router;
-
-class Application{
-    public Router $router;
+class Application
+{
     public Request $request;
+    public Router $router;
 
-    public function __construct()
+    public static string $ROOT_PATH;
+
+
+    public function __construct($rootPath)
+
     {
+        self::$ROOT_PATH = $rootPath;
         $this->request = new Request();
+
         $this->router = new Router($this->request);
-        
     }
 
-    public function run(){
+
+    public function run()
+    {
         $this->router->resolve();
     }
 }
