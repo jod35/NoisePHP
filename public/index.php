@@ -21,4 +21,7 @@ $app->router->get('/users',"users");
 $app->router->get('/home','home');
 
 
+// $app->router->post('/contact','contact');
+
+
 $app->run();

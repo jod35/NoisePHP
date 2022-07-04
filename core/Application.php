@@ -6,6 +6,7 @@ class Application
 {
     public Request $request;
     public Router $router;
+    public Response $response;
 
     public static string $ROOT_PATH;
 
@@ -16,7 +17,9 @@ class Application
         self::$ROOT_PATH = $rootPath;
         $this->request = new Request();
 
-        $this->router = new Router($this->request);
+        $this->response = new Response();
+
+        $this->router = new Router($this->request,$this->response);
     }
 
 
